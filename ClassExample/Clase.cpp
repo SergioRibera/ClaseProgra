@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Clase.h"
 
+#define MAX 100
+
 using namespace std;
 
 // Constructor de la clase
@@ -26,6 +28,28 @@ void Clase::rellenarArreglo(){
         cin >> v1[i];
     }
 }
+void Clase::invertirVector(){
+    int vec2[MAX];
+    for (int i = 0; i < m; i++)
+        vec2[i] = v1[m - (i + 1)];
+        // cuando el tamaño del arreglo (m) es igual a 4
+        // m - (i + 1)
+        // tamañoDelArreglo - (posicionActual + 1)
+        // es decir que cuando i sea 0
+        // nuestro indice invertido va a ser
+        // 4 - (0 + 1)
+        // 4 - 1
+        // = 3
+        //
+        // int int_monto = System::Convert::ToInt32(textmonto->Text);
+
+    cout << "Vector Invertido: " << endl;
+
+    for (int i = 0; i < m; i++){
+        cout << "[" << i << "] => " << vec2[i] << endl;
+    }
+}
+
 //
 //      Getters
 //

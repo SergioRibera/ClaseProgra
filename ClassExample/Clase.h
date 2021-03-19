@@ -20,6 +20,8 @@ class Clase{
         Clase(void);
         ~Clase(void);
 
+        void invertirVector();
+
         // Getters
         int getElement(int index);
         void getElements();
